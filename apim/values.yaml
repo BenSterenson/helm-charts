@@ -112,8 +112,8 @@ mongo:
   sslEnabled: false
   socketKeepAlive: false
   rs: rs0
-  rsEnabled: true
-  dbhost: mongo-mongodb-replicaset
+  rsEnabled: false
+  dbhost: mongodb
   dbname: gravitee
   dbport: 27017
   connectTimeoutMS: 30000
@@ -156,7 +156,7 @@ mongodb-replicaset:
   configmap: {}
 
 es:
-  enabled: true
+  enabled: false
   cluster: elasticsearch
   index: gravitee
   # If the details for security are entered
