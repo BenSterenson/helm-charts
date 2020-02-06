@@ -156,7 +156,7 @@ mongodb-replicaset:
   configmap: {}
 
 es:
-  enabled: false
+  enabled: true
   cluster: elasticsearch
   index: gravitee
   # If the details for security are entered
