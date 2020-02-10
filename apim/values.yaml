@@ -112,7 +112,7 @@ mongo:
   sslEnabled: false
   socketKeepAlive: false
   rs: rs0
-  rsEnabled: false
+  rsEnabled: true
   dbhost: mongodb
   dbname: gravitee
   dbport: 27017
