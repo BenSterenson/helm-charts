@@ -473,20 +473,20 @@ ui:
   lifecycle:
     postStart: '[ "/bin/sh", "-c", "cp -R -u /tmp/sixgill_themes/* /var/www/html/themes" ]'
 
-  extraInitContainers: |
-    - name: Sixgill
-      image: sixgilldocker/sixgill:gravitee-0.1.0
-      imagePullPolicy: IfNotPresent
-      command:
-        - sh
-      args:
-        - -c
-        - |
-        echo "Copying theme..."
-        cp -R /sixgill_themes/* /theme
-      volumeMounts:
-        - name: theme
-          mountPath: /theme
+#  extraInitContainers: |
+#    - name: Sixgill
+#      image: sixgilldocker/sixgill:gravitee-0.1.0
+#      imagePullPolicy: IfNotPresent
+#      command:
+#        - sh
+#      args:
+#        - -c
+#        - |
+#        echo "Copying theme..."
+#        cp -R /sixgill_themes/* /theme
+#      volumeMounts:
+#        - name: theme
+#          mountPath: /theme
 
   extraVolumeMounts: |
     - name: theme
