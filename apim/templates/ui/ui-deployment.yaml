@@ -40,16 +40,10 @@ spec:
       - name: sixgill
         image: sixgilldocker/sixgill:gravitee-0.1.0
         imagePullPolicy: IfNotPresent
-          command:
-            - sh
-          args:
-            - -c
-            - |
-            echo "Copying theme..."
-            cp -R /sixgill_themes/* /theme
-          volumeMounts:
-            - name: theme
-              mountPath: /theme
+        command: ['sh', '-c', 'echo "Copying theme..."; cp -R /sixgill_themes/* /theme;']
+        volumeMounts:
+        - name: theme
+          mountPath: /theme
 
       #{{- with .Values.ui.extraInitContainers }}
       #  {{- tpl . $ | nindent 8 }}
