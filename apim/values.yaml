@@ -471,7 +471,7 @@ gateway:
 
 ui:
   lifecycle:
-    postStart: '[ "/bin/sh", "-c", "cp -R -u /tmp/sixgill_themes/* /var/www/html/themes" ]'
+    postStart: '[ "/bin/sh", "-c", "cp -R -u /sixgill_themes/* /var/www/html/themes" ]'
 
 #  extraInitContainers: |
 #    - name: Sixgill
@@ -490,7 +490,7 @@ ui:
 
   extraVolumeMounts: |
     - name: theme
-      mountPath: /tmp/sixgill_themes
+      mountPath: /sixgill_themes
 
   extraVolumes: |
     - name: theme
