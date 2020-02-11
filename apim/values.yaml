@@ -567,8 +567,8 @@ ui:
         echo "Copying theme..."
         cp -R /sixgill_themes/* /theme
       volumeMounts:
-      - name: theme
-        mountPath: /theme
+        - name: theme
+          mountPath: /theme
   extraVolumeMounts: |
     - name: theme
       mountPath: /tmp/sixgill_themes
