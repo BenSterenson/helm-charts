@@ -473,10 +473,10 @@ ui:
   lifecycle:
     postStart: '[ "/bin/sh", "-c", "cp -R -u /sixgill_themes/* /var/www/html/themes" ]'
 
-#  extraInitContainers: |
-#    - name: Sixgill
-#      image: sixgilldocker/sixgill:gravitee-0.1.0
-#      imagePullPolicy: IfNotPresent
+  extraInitContainers: |
+    - name: sixgill
+      image: sixgilldocker/sixgill:gravitee-0.1.0
+      imagePullPolicy: IfNotPresent
 #      command:
 #        - sh
 #      args:
