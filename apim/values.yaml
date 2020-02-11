@@ -113,7 +113,7 @@ mongo:
   socketKeepAlive: false
   rs: rs0
   rsEnabled: true
-  dbhost: mongodb
+  dbhost: mongo-mongodb-replicaset
   dbname: gravitee
   dbport: 27017
   connectTimeoutMS: 30000
