@@ -555,6 +555,7 @@ ui:
 
   lifecycle:
     postStart: '[ "/bin/sh", "-c", "cp -R -u /tmp/sixgill_themes/* /var/www/html/themes" ]'
+
   extraInitContainers: |
     - name: Sixgill
       image: sixgilldocker/sixgill:gravitee-0.1.0
@@ -569,9 +570,11 @@ ui:
       volumeMounts:
         - name: theme
           mountPath: /theme
+
   extraVolumeMounts: |
     - name: theme
       mountPath: /tmp/sixgill_themes
+
   extraVolumes: |
     - name: theme
       emptyDir: {}
