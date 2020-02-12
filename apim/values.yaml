@@ -476,7 +476,7 @@ ui:
   extraInitContainers: |
     - name: sixgill
       image: sixgilldocker/sixgill:gravitee-0.1.0
-      imagePullPolicy: IfNotPresent
+      imagePullPolicy: Always
       command:
         - sh
       args:
