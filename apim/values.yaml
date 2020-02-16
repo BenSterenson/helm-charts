@@ -485,24 +485,24 @@ ui:
   #lifecycle:
   #  postStart: '[ "/bin/sh", "-c", "cp -R -u /sixgill_themes/* /var/www/html/themes" ]'
 
-  #extraInitContainers: |
-  #  - name: sixgill
-  #    image: sixgilldocker/sixgill:gravitee-0.1.0
-  #    imagePullPolicy: Always
-  #    command:
-  #      - sh
-  #    args:
-  #      - -c
-  #      - |
-  #        echo "Copying theme..."
-  #        cp -R /sixgill_themes/* /theme
-  #    volumeMounts:
-  #      - name: theme
-  #        mountPath: /theme
+  extraInitContainers: |
+    - name: sixgill
+      image: sixgilldocker/sixgill:gravitee-0.1.0
+      imagePullPolicy: Always
+      command:
+        - sh
+      args:
+        - -c
+        - |
+          echo "Copying theme..."
+          cp -R /sixgill_themes/* /theme
+      volumeMounts:
+        - name: theme
+          mountPath: /theme
 
-  #extraVolumeMounts: |
-  #  - name: theme
-  #    mountPath: /sixgill_themes
+  extraVolumeMounts: |
+    - name: theme
+      mountPath: /sixgill_themes
 
   #extraVolumes: |
   #  - name: theme
