@@ -482,8 +482,8 @@ gateway:
     #   existingClaim: volume-claim
 
 ui:
-  #lifecycle:
-  #  postStart: '[ "/bin/sh", "-c", "cp -R -u /sixgill_themes/* /var/www/html/themes" ]'
+  lifecycle:
+    postStart: '[ "/bin/sh", "-c", "cp -R -u /sixgill_themes/* /var/www/html/themes" ]'
 
   extraInitContainers: |
     - name: sixgill
