@@ -504,9 +504,9 @@ ui:
     - name: theme
       mountPath: /sixgill_themes
 
-  extraVolumes: |
-    - name: theme
-      emptyDir: {}
+  #extraVolumes: |
+  #  - name: theme
+  #    emptyDir: {}
   enabled: true
   name: ui
   title: API Portal
