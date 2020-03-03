@@ -31,6 +31,18 @@ spec:
         app.kubernetes.io/instance: {{ .Release.Name }}
         app.kubernetes.io/component: "{{ .Values.ui.name }}"
     spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app.kubernetes.io/component
+                      operator: In
+                      values:
+                        - ui
+                topologyKey: kubernetes.io/hostname
+              weight: 1
     {{- if .Values.ui.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.ui.nodeSelector | indent 8 }}
